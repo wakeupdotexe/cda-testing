@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>pixi-test</title>
+    <style>
+      body { margin: 0; overflow: hidden; }
+    </style>
+    <script type="importmap">
+{
+  "imports": {
+    "pixi.js": "https://cdn.jsdelivr.net/npm/pixi.js@8.23.0/dist/pixi.min.mjs",
+    "pixi.js/browser": "https://cdn.jsdelivr.net/npm/pixi.js@8.23.0/dist/pixi.min.mjs",
+    "pixi.js/webworker": "https://cdn.jsdelivr.net/npm/pixi.js@8.23.0/dist/pixi.min.mjs",
+    "pixi.js/gif": "https://pixijs.com/runtime/pixi.js@8.23.0/gif.mjs",
+    "pixi.js/html-source": "https://pixijs.com/runtime/pixi.js@8.23.0/html-source.mjs",
+    "pixi.js/accessibility": "https://cdn.jsdelivr.net/npm/pixi.js@8.23.0/dist/pixi.min.mjs",
+    "pixi.js/advanced-blend-modes": "https://pixijs.com/runtime/pixi.js@8.23.0/advanced-blend-modes.mjs",
+    "pixi.js/app": "https://cdn.jsdelivr.net/npm/pixi.js@8.23.0/dist/pixi.min.mjs",
+    "pixi.js/dds": "https://pixijs.com/runtime/pixi.js@8.23.0/dds.mjs",
+    "pixi.js/ktx": "https://pixijs.com/runtime/pixi.js@8.23.0/ktx.mjs",
+    "pixi.js/ktx2": "https://pixijs.com/runtime/pixi.js@8.23.0/ktx2.mjs",
+    "pixi.js/basis": "https://pixijs.com/runtime/pixi.js@8.23.0/basis.mjs",
+    "pixi.js/events": "https://cdn.jsdelivr.net/npm/pixi.js@8.23.0/dist/pixi.min.mjs",
+    "pixi.js/dom": "https://cdn.jsdelivr.net/npm/pixi.js@8.23.0/dist/pixi.min.mjs",
+    "pixi.js/filters": "https://cdn.jsdelivr.net/npm/pixi.js@8.23.0/dist/pixi.min.mjs",
+    "pixi.js/math-extras": "https://pixijs.com/runtime/pixi.js@8.23.0/math-extras.mjs",
+    "pixi.js/sprite-tiling": "https://cdn.jsdelivr.net/npm/pixi.js@8.23.0/dist/pixi.min.mjs",
+    "pixi.js/text": "https://cdn.jsdelivr.net/npm/pixi.js@8.23.0/dist/pixi.min.mjs",
+    "pixi.js/text-bitmap": "https://cdn.jsdelivr.net/npm/pixi.js@8.23.0/dist/pixi.min.mjs",
+    "pixi.js/text-html": "https://cdn.jsdelivr.net/npm/pixi.js@8.23.0/dist/pixi.min.mjs",
+    "pixi.js/graphics": "https://cdn.jsdelivr.net/npm/pixi.js@8.23.0/dist/pixi.min.mjs",
+    "pixi.js/graphics-smooth": "https://cdn.jsdelivr.net/npm/pixi.js@8.23.0/dist/pixi.min.mjs",
+    "pixi.js/mesh": "https://cdn.jsdelivr.net/npm/pixi.js@8.23.0/dist/pixi.min.mjs",
+    "pixi.js/prepare": "https://pixijs.com/runtime/pixi.js@8.23.0/prepare.mjs",
+    "pixi.js/unsafe-eval": "https://pixijs.com/runtime/pixi.js@8.23.0/unsafe-eval.mjs",
+    "pixi.js/sprite-nine-slice": "https://cdn.jsdelivr.net/npm/pixi.js@8.23.0/dist/pixi.min.mjs",
+    "pixi.js/particle-container": "https://cdn.jsdelivr.net/npm/pixi.js@8.23.0/dist/pixi.min.mjs",
+    "@pixi/3d": "https://cdn.jsdelivr.net/npm/@pixi/3d@0.1.0/dist/pixijs-3d.min.mjs",
+    "@pixi/3d/extras": "https://cdn.jsdelivr.net/npm/@pixi/3d@0.1.0/dist/pixijs-3d-extras.min.mjs",
+    "@pixi/3d/webgl": "https://cdn.jsdelivr.net/npm/@pixi/3d@0.1.0/dist/pixijs-3d-webgl.min.mjs",
+    "@pixi/3d/webgpu": "https://cdn.jsdelivr.net/npm/@pixi/3d@0.1.0/dist/pixijs-3d-webgpu.min.mjs",
+    "pixi-filters": "https://cdn.jsdelivr.net/npm/pixi-filters@6.1.5/dist/pixi-filters.mjs",
+    "gsap": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/index.js",
+    "gsap/CSSPlugin": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/CSSPlugin.js",
+    "gsap/CSSRulePlugin": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/CSSRulePlugin.js",
+    "gsap/CustomBounce": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/CustomBounce.js",
+    "gsap/CustomEase": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/CustomEase.js",
+    "gsap/CustomWiggle": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/CustomWiggle.js",
+    "gsap/Draggable": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/Draggable.js",
+    "gsap/DrawSVGPlugin": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/DrawSVGPlugin.js",
+    "gsap/EasePack": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/EasePack.js",
+    "gsap/EaselPlugin": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/EaselPlugin.js",
+    "gsap/Flip": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/Flip.js",
+    "gsap/GSDevTools": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/GSDevTools.js",
+    "gsap/InertiaPlugin": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/InertiaPlugin.js",
+    "gsap/MorphSVGPlugin": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/MorphSVGPlugin.js",
+    "gsap/MotionPathHelper": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/MotionPathHelper.js",
+    "gsap/MotionPathPlugin": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/MotionPathPlugin.js",
+    "gsap/Observer": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/Observer.js",
+    "gsap/Physics2DPlugin": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/Physics2DPlugin.js",
+    "gsap/PhysicsPropsPlugin": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/PhysicsPropsPlugin.js",
+    "gsap/PixiPlugin": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/PixiPlugin.js",
+    "gsap/ScrambleTextPlugin": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/ScrambleTextPlugin.js",
+    "gsap/ScrollSmoother": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/ScrollSmoother.js",
+    "gsap/ScrollToPlugin": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/ScrollToPlugin.js",
+    "gsap/ScrollTrigger": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/ScrollTrigger.js",
+    "gsap/SplitText": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/SplitText.js",
+    "gsap/TextPlugin": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/TextPlugin.js",
+    "gsap/all": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/all.js",
+    "gsap/gsap-core": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/gsap-core.js",
+    "@esotericsoftware/spine-pixi-v8": "https://cdn.jsdelivr.net/npm/@esotericsoftware/spine-pixi-v8@4.3.7/dist/esm/spine-pixi-v8.min.mjs",
+    "three": "https://cdn.jsdelivr.net/npm/three@0.182.0/build/three.module.min.js"
+  }
+}
+    </script>
+  </head>
+  <body>
+    <script type="module"> import './pixi-test.js'; </script>
+  </body>
+</html>
